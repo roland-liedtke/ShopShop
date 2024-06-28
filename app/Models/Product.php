@@ -16,4 +16,21 @@ class Product extends Model
         'image_url',
         'stock'
     ];
+
+    // Definicja relacji do komentarzy
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    // Definicja relacji do ocen
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
