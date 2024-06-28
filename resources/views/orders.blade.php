@@ -4,10 +4,10 @@
 
 @section('content')
     <div class="container mt-5">
+        <h1>Twoje zamówienia</h1>
         @if($orders->isEmpty())
             <p>Nie masz zamówień</p>
         @else
-            <h1>Twoje zamówienia</h1>
             <table class="table table-bordered">
                 <thead>
                 <tr>
@@ -22,7 +22,7 @@
                 @foreach($orders as $order)
                     <tr>
                         <td>{{ $order->id }}</td>
-                        <td>${{ number_format($order->total_price, 2) }}</td>
+                        <td>${{ number_format($order->total, 2) }}</td>
                         <td>{{ $order->status }}</td>
                         <td>{{ $order->created_at->format('d-m-Y') }}</td>
                         <td><a href="{{ route('order.show', $order->id) }}" class="btn btn-primary">Szczegóły</a></td>

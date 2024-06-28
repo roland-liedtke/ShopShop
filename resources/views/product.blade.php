@@ -11,6 +11,7 @@
             <div class="col-md-6">
                 <h1 class="display-4">{{ $product->name }}</h1>
                 <p class="lead">{{ $product->description }}</p>
+                <p class="card-text">Stan magazynowy: {{ $product->stock }}</p>
                 <h3 class="text-success">${{ number_format($product->price, 2) }}</h3>
                 <form action="{{ route('cart.add', $product->id) }}" method="POST">
                     @csrf

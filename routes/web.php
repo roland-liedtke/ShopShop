@@ -41,9 +41,28 @@ Route::middleware('auth')->group(function () {
     Route::get('/order/{id}', [OrderController::class, 'show'])->name('order.show');
 });
 
+
 // ==== DASHBOARD ==== //
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
+// ================= ADMIN ================ //
+Route::middleware(['auth', 'admin'])->group(function () {
+
+    Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('admin/dashboard');
+
+    Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
+
+    Route::get('/admin/products/create', [ProductController::class, 'create'])->name('admin/products/create');
+
+    Route::post('/admin/products/save', [ProductController::class, 'save'])->name('admin/products/save');
+
+    Route::get('/admin/products/edit/{id}', [ProductController::class, 'edit'])->name('admin/products/edit');
+
+    Route::put('/admin/products/edit/{id}', [ProductController::class, 'update'])->name('admin/products/update');
+
+    Route::get('/admin/products/delete/{id}', [ProductController::class, 'delete'])->name('admin/products/delete');
+});
 require __DIR__.'/auth.php';

@@ -12,9 +12,11 @@
                     @foreach($cartItems as $item)
                         <li class="list-group-item">
                             <div>{{ $item->name }} - {{ $item->quantity }} x {{ $item->price }} PLN</div>
+                            <div>Suma: {{$sum = $item->quantity * $item->price}}</div>
                         </li>
                     @endforeach
                 </ul>
+{{--                <p class="card-text">Razem: </p>--}}
             </div>
             <div class="col-md-6">
                 <h4>Adres do wysyłki</h4>
