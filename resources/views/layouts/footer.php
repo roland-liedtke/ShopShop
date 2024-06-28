@@ -1,9 +1,9 @@
 
 <!-- Footer -->
-<footer>
+<footer class="bg-light py-4">
 
     <!-- Footer Top -->
-    <div class="footer-top">
+    <div class="footer-top py-4">
         <div class="container">
             <div class="row">
 
@@ -28,7 +28,7 @@
     </div>
 
     <!-- Footer Middle -->
-    <div class="footer-middle">
+    <div class="footer-middle py-4">
         <div class="container">
             <div class="row">
 
@@ -56,13 +56,13 @@
                 </div>
 
                 <!-- Newsletter -->
-                <div class="col-sm-3 col-sm-offset-1">
+                <div class="col-sm-4 col-sm-offset-1">
                     <div class="single-widget">
-                        <h2>Newsletter</h2>
+                        <h2 class="py-1">Newsletter</h2>
                         <form action="#" class="searchform">
                             <input type="text" placeholder="Your email address" />
-                            <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
-                            <p>Get the most recent updates from <br />our site and be updated your self...</p>
+                            <button type="submit" class="btn btn-secondary">Dołącz</button>
+                            <p class="py-2">Bądź z nami w kontakcie Panie Boże, choć diabeł robi nam zwarcie</p>
                         </form>
                     </div>
                 </div>

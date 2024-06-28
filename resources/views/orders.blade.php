@@ -3,8 +3,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container mt-5">
-        <h1>Twoje zamówienia</h1>
+    <div class="container mt-5 py-4">
+        <h1 class="py-4">Twoje zamówienia</h1>
         @if($orders->isEmpty())
             <p>Nie masz zamówień</p>
         @else

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\CommentController;
@@ -55,7 +56,7 @@ Route::get('/dashboard', function () {
 // ================= ADMIN ================ //
 Route::middleware(['auth', 'admin'])->group(function () {
 
-    Route::get('/admin/dashboard', [HomeController::class, 'index'])->name('admin/dashboard');
+    Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin/dashboard');
 
     Route::get('/admin/products', [ProductController::class, 'index'])->name('admin/products');
 

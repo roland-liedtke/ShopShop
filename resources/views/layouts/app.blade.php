@@ -12,7 +12,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" style="background-color: black !important">
+
     <!-- Logo -->
     <div class="col-sm-2">
         <div class="logo pull-left">
@@ -25,17 +26,17 @@
         <ul class="navbar-nav ml-auto">
             @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('login') }}">Logowanie</a>
+                    <a class="nav-link" href="{{ route('login') }}"><span class="text-white">Logowanie</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('register') }}">Rejestracja</a>
+                    <a class="nav-link" href="{{ route('register') }}"><span class="text-white">Rejestracja</span></a>
                 </li>
             @else
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('orders.index') }}">Zamówienia</a>
+                    <a class="nav-link" href="{{ route('orders.index') }}"><span class="text-white">Zamówienia</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('cart.index') }}">Koszyk</a>
+                    <a class="nav-link" href="{{ route('cart.index') }}"><span class="text-white">Koszyk</span></a>
                 </li>
                 <li class="nav-item">
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -50,13 +51,13 @@
     </div>
 </nav>
 
-<main class="py-4">
+<main>
 
     @yield('content')
 
 
     <!-- IMAGE -->
-    <div class="py-4">
+    <div>
         <img src="https://rolandliedtke.me/ChairShop/pattern.png" alt="pattern" style="max-width: 100%">
     </div>
 
@@ -64,5 +65,9 @@
 
 @include("layouts.footer")
 
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container mt-5 py-4">
         <h2 class="mb-4">Zamówienie nr #{{ $order->id }}</h2>
 
         <div class="card">

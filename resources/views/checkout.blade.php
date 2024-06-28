@@ -3,8 +3,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <h1>Podsumowanie zamówienia</h1>
+    <div class="container py-4">
+        <h1 class="py-4">Podsumowanie zamówienia</h1>
         <div class="row">
             <div class="col-md-6">
                 <h4>Produkty w koszyku</h4>
